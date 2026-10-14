@@ -20,7 +20,7 @@ The v1.0.0 release, source archive, and original Blender assets are preserved un
 ## What’s in the current game
 
 - One human driver and one friendly AI teammate against the CPU rival.
-- A roughly **64 × 50 m** playable pitch—about 35% more floor area than the original field—with scaled 3D arena art and matching 2D markings.
+- A roughly **64 × 50 m** playable pitch—about **83% more floor area** than the original **47.3 × 37 m** field—with scaled 3D arena art and matching 2D markings.
 - Boundary handling keeps cars inside the field; the ball rebounds from side/end walls and only scores through the goal aperture.
 - The teammate seeks a support lane and can challenge the ball; the CPU attacks and defends.
 - Three-minute matches, goals, kickoff resets, pause, restart, rematch and a five-goal early finish.
