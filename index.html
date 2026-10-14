@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#060b15" />
-    <meta name="description" content="Neon Circuit — a local arcade car-soccer game." />
+    <meta name="description" content="Neon Circuit — a local arcade car-soccer game with an AI teammate and a larger pitch." />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Neon Circuit — Arcade Soccer</title>
-    <script type="module" crossorigin src="/assets/index-CS8D9brB.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CXmqaq3c.css">
+    <script type="module" crossorigin src="/assets/index-BOLFTpHa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-8PHIqcLz.css">
   </head>
   <body>
     <div id="game-world"><canvas id="game-canvas" aria-label="3D car soccer arena"></canvas></div>
@@ -17,33 +17,33 @@
 
     <header class="topbar">
       <a class="brand" href="#" aria-label="Neon Circuit home"><span class="brand-mark"><i></i><i></i><i></i></span><span>NEON<span class="brand-light">CIRCUIT</span></span></a>
-      <div class="top-meta"><span class="live-dot"></span><span>LOCAL ARCADE BUILD</span><span class="meta-divider"></span><span>01V / SOLO CIRCUIT</span></div>
+      <div class="top-meta"><span class="live-dot"></span><span>LOCAL ARCADE BUILD</span><span class="meta-divider"></span><span>2V / BUDDY CIRCUIT</span></div>
       <button id="sound-toggle" class="icon-button" aria-label="Toggle sound effects" title="Sound effects are off"><span class="sound-icon">◖</span></button>
     </header>
 
     <main id="home-screen" class="home-screen">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="eyebrow-line"></span>THE ARENA IS YOURS</div>
+        <div class="eyebrow"><span class="eyebrow-line"></span>YOUR TEAM. YOUR ARENA.</div>
         <h1>Drive fast.<br /><span>Play bigger.</span></h1>
-        <p class="hero-desc">A one-on-one car-soccer showdown under the aurora. Outdrive the rival, meet the ball, and put it in the net.</p>
+        <p class="hero-desc">A bigger car-soccer pitch under the aurora. Team up with an AI ally, outdrive the rival, and put it in the net.</p>
         <div class="feature-row">
           <div class="feature"><span class="feature-icon">↗</span><div><b>ARCADE HANDLING</b><small>Quick turns · charged boost</small></div></div>
-          <div class="feature"><span class="feature-icon">◎</span><div><b>LIVE RIVAL AI</b><small>Chases, challenges, defends</small></div></div>
+          <div class="feature"><span class="feature-icon">◎</span><div><b>AI TEAMMATE</b><small>Supports, challenges, defends</small></div></div>
         </div>
-        <button id="start-button" class="start-button"><span class="start-symbol">▶</span><span><b>START MATCH</b><small>1 PLAYER · VS COMPUTER</small></span><span class="start-arrow">↗</span></button>
+        <button id="start-button" class="start-button"><span class="start-symbol">▶</span><span><b>START MATCH</b><small>YOU + AI · VS CPU</small></span><span class="start-arrow">↗</span></button>
         <div class="under-button"><span>NO INSTALL · RUNS ON THIS COMPUTER</span><span>BEST WITH KEYBOARD</span></div>
       </div>
 
       <aside class="match-card">
         <div class="card-top"><span class="card-label">QUICK MATCH</span><span class="card-number">NC / 001</span></div>
         <div class="matchup">
-          <div class="team team-blue"><div class="team-emblem">R</div><span>RIFT RUNNER</span><small>YOU</small></div>
+          <div class="team team-blue"><div class="team-emblem">R</div><span>RIFT RUNNER</span><small>YOU + AI PARTNER</small></div>
           <div class="versus"><span>VS</span><i></i></div>
           <div class="team team-orange"><div class="team-emblem">B</div><span>BULWARK</span><small>CPU RIVAL</small></div>
         </div>
         <div class="card-rule"></div>
         <div class="arena-line"><span class="arena-thumb">✦</span><div><small>ARENA</small><b>AURORA SKYDOME</b></div><span class="arena-status">READY</span></div>
-        <div class="card-foot"><span><i class="mini-ring"></i> 3 MIN MATCH</span><span>FIRST TO LEAD</span></div>
+        <div class="card-foot"><span><i class="mini-ring"></i> 3 MIN MATCH</span><span>64 × 50 M PITCH</span></div>
       </aside>
 
       <div class="scroll-cue"><span></span>WELCOME TO THE CIRCUIT</div>
@@ -52,8 +52,8 @@
 
     <section id="game-hud" class="game-hud" aria-live="polite">
       <div class="hud-scoreboard">
-        <div class="hud-side hud-blue"><span class="hud-name">YOU <i>▸</i></span><b id="player-score">0</b></div>
-        <div class="hud-center"><span class="hud-live"><i></i> LIVE</span><b id="timer">03:00</b><small>SOLO CIRCUIT</small></div>
+        <div class="hud-side hud-blue"><span class="hud-name">YOU + AI <i>▸</i></span><b id="player-score">0</b></div>
+        <div class="hud-center"><span class="hud-live"><i></i> LIVE</span><b id="timer">03:00</b><small>TEAM MATCH</small></div>
         <div class="hud-side hud-orange"><b id="ai-score">0</b><span class="hud-name">CPU <i>◂</i></span></div>
       </div>
       <button id="pause-button" class="pause-button" aria-label="Pause match"><span>Ⅱ</span></button>
@@ -71,7 +71,7 @@
       <div class="modal-card"><div class="modal-kicker">MATCH CONTROL</div><h2>Catch your breath.</h2><p>Ready when you are. The arena is waiting.</p><button id="resume-button" class="start-button modal-primary"><span class="start-symbol">▶</span><span><b>RESUME MATCH</b><small>BACK TO THE ACTION</small></span><span class="start-arrow">↗</span></button><button id="restart-button" class="text-button">Restart match <span>↻</span></button><button id="home-button" class="text-button">Back to title <span>⌂</span></button></div>
     </section>
     <section id="end-screen" class="modal-screen" hidden>
-      <div class="modal-card"><div class="modal-kicker">FINAL WHISTLE</div><h2 id="result-title">Nice run.</h2><p id="result-copy">The next match is yours to take.</p><div class="final-score"><span>YOU <b id="final-player">0</b></span><i>—</i><span>CPU <b id="final-ai">0</b></span></div><button id="rematch-button" class="start-button modal-primary"><span class="start-symbol">▶</span><span><b>RUN IT BACK</b><small>NEW MATCH · SAME RIVAL</small></span><span class="start-arrow">↗</span></button><button id="end-home-button" class="text-button">Back to title <span>⌂</span></button></div>
+      <div class="modal-card"><div class="modal-kicker">FINAL WHISTLE</div><h2 id="result-title">Nice run.</h2><p id="result-copy">The next match is yours to take.</p><div class="final-score"><span>YOU + AI <b id="final-player">0</b></span><i>—</i><span>CPU <b id="final-ai">0</b></span></div><button id="rematch-button" class="start-button modal-primary"><span class="start-symbol">▶</span><span><b>RUN IT BACK</b><small>NEW MATCH · SAME RIVAL</small></span><span class="start-arrow">↗</span></button><button id="end-home-button" class="text-button">Back to title <span>⌂</span></button></div>
     </section>
 
     <div id="loading-note" class="loading-note"><span class="loading-spinner"></span><span>PREPARING THE ARENA</span></div>
